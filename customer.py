@@ -9,7 +9,7 @@ class Customer:
     @name.setter
     def name(self, value):
         if not isinstance(value, str):
-            raise ValueError("Name must be a string")
+            raise ValueError("customer name must be a string")
         if not 1<= len(value)<=15:
             raise ValueError("must be between 1 and 15 characters")
         self._name = value
@@ -21,7 +21,7 @@ class Customer:
         return self._orders #Returns a list of all orders for this customer
 
     def coffees(self):
-        #returns a unique list of coffees that the customer has ordered
+        #returns a list of coffees that the customer has ordered
         return list({order.coffee for order in self._orders}) 
 
     def create_order(self, coffee, price):
