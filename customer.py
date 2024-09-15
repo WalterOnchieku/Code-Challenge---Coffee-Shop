@@ -5,7 +5,8 @@ class Customer:
     @property
     def name(self):
         return self._name
-
+        
+    #customer name is to be a string between 1 and 15 characters
     @name.setter
     def name(self, value):
         if not isinstance(value, str):

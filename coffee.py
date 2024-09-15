@@ -7,6 +7,7 @@ class Coffee:
     def name(self):
         return self._name
 
+    #coffee name is to be a string at least 3 characters long
     @name.setter
     def name(self, value):
         if not isinstance(value, str):
